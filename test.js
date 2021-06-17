@@ -9,6 +9,6 @@ const config = {
   timeout: 2000
 }
 
-app.use(erlasty.static(__dirname + '/app/build', port, config))
+app.use(erlasty.static(__dirname + '/app', port, config))
 
 app.listen(port)
