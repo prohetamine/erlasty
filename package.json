@@ -1,15 +1,28 @@
 {
-  "name": "test",
+  "name": "erlasty",
   "version": "1.0.0",
-  "description": "",
+  "description": "react server render by puppeteer for search bots",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prohetamine/erlasty.git"
+  },
+  "keywords": [
+    "react",
+    "ssr",
+    "server-rendering",
+    "puppeteer"
+  ],
+  "author": "Stas Prohetamine",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "puppeteer": "^10.0.0"
-  }
+  "bugs": {
+    "url": "https://github.com/prohetamine/erlasty/issues"
+  },
+  "homepage": "https://github.com/prohetamine/erlasty#readme"
 }

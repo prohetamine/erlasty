@@ -2,7 +2,7 @@ const express       = require('express')
     , puppeteer     = require('puppeteer')
     , fs            = require('fs')
     , findAllFiles  = require('./lib/find-all-files')
-    , isBot  = require('./lib/is-bot')
+    , isBot         = require('./lib/is-bot')
 
 module.exports.static = (
   path,
@@ -29,7 +29,7 @@ module.exports.static = (
   const files = findAllFiles(path)
 
   return async (req, res, next) => {
-    const normalizeFile = req.url === '/' ? '/' : req.url.replace(/\/$/, '').match(/([^\/]+|\/)$/gi)[0]
+    const normalizeFile = req.url === '/' ? '/' : req.url.replace(/\/$/, '').replace(/\?.+/, '').match(/([^\/]+|\/)$/gi)[0]
         , isIndex = !files.includes(normalizeFile)
 
     const pureStatic = () => {
