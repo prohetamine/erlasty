@@ -62,9 +62,7 @@ module.exports.static = (
       }
 
       try {
-        const browser = await puppeteer.launch({
-          headless: true
-        })
+        const browser = await puppeteer.launch(puppeteerConfig)
             , page = await browser.newPage()
         await page.goto(`http://localhost:${port}` + req.url)
         const innerHTML = await page.evaluate(() => document.querySelector('html').innerHTML)

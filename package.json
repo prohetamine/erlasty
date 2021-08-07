@@ -1,6 +1,6 @@
 {
   "name": "erlasty",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react server render by puppeteer for search bots",
   "main": "index.js",
   "directories": {
