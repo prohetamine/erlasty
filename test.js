@@ -9,6 +9,10 @@ const config = {
   timeout: 2000
 }
 
-app.use(erlasty.static(__dirname + '/app', port, config))
+const puppeteerConfig = {
+  headless: true
+}
+
+app.use(erlasty.static(__dirname + '/app', port, config, puppeteerConfig))
 
 app.listen(port)

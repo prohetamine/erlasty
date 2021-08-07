@@ -17,6 +17,9 @@ module.exports.static = (
     count: 7,
     interval: 500,
     timeout: 10000
+  },
+  puppeteerConfig = {
+    headless: true
   }
 ) => {
   let counter = 0
@@ -59,7 +62,9 @@ module.exports.static = (
       }
 
       try {
-        const browser = await puppeteer.launch({ headless: true })
+        const browser = await puppeteer.launch({
+          headless: true
+        })
             , page = await browser.newPage()
         await page.goto(`http://localhost:${port}` + req.url)
         const innerHTML = await page.evaluate(() => document.querySelector('html').innerHTML)
